@@ -10,6 +10,8 @@
 
 @interface WebProxyViewController ()
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 @end
 
 @implementation WebProxyViewController
@@ -18,6 +20,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSURL *url = [NSURL URLWithString:@"http://google.com"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [_webView loadRequest:request];
+    
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    
+    _webView.frame = self.view.bounds;
 }
 
 - (void)didReceiveMemoryWarning
