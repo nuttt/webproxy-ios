@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2F906E196BA8940038AB84 /* LocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F906D196BA8940038AB84 /* LocalCache.m */; };
 		7B64E21B19641ED100CDD6AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64E21A19641ED100CDD6AB /* Foundation.framework */; };
 		7B64E21D19641ED100CDD6AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64E21C19641ED100CDD6AB /* CoreGraphics.framework */; };
 		7B64E21F19641ED100CDD6AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64E21E19641ED100CDD6AB /* UIKit.framework */; };
@@ -22,6 +23,9 @@
 		7B64E23F19641ED100CDD6AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64E21E19641ED100CDD6AB /* UIKit.framework */; };
 		7B64E24719641ED100CDD6AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B64E24519641ED100CDD6AB /* InfoPlist.strings */; };
 		7B64E24919641ED100CDD6AB /* WebProxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B64E24819641ED100CDD6AB /* WebProxyTests.m */; };
+		7B64E2541964323500CDD6AB /* UrlCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B64E2531964323500CDD6AB /* UrlCache.m */; };
+		7B73C413196BAB0A00DCFCBB /* FilePathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B73C412196BAB0A00DCFCBB /* FilePathHelper.m */; };
+		7BBE1FC0196AC3C10026021A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBE1FBF196AC3C10026021A /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B2F906C196BA8940038AB84 /* LocalCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalCache.h; sourceTree = "<group>"; };
+		7B2F906D196BA8940038AB84 /* LocalCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalCache.m; sourceTree = "<group>"; };
 		7B64E21719641ED100CDD6AB /* WebProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B64E21A19641ED100CDD6AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B64E21C19641ED100CDD6AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +61,11 @@
 		7B64E24419641ED100CDD6AB /* WebProxyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebProxyTests-Info.plist"; sourceTree = "<group>"; };
 		7B64E24619641ED100CDD6AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B64E24819641ED100CDD6AB /* WebProxyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebProxyTests.m; sourceTree = "<group>"; };
+		7B64E2521964323500CDD6AB /* UrlCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlCache.h; sourceTree = "<group>"; };
+		7B64E2531964323500CDD6AB /* UrlCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlCache.m; sourceTree = "<group>"; };
+		7B73C411196BAB0A00DCFCBB /* FilePathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePathHelper.h; sourceTree = "<group>"; };
+		7B73C412196BAB0A00DCFCBB /* FilePathHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePathHelper.m; sourceTree = "<group>"; };
+		7BBE1FBF196AC3C10026021A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBE1FC0196AC3C10026021A /* libsqlite3.dylib in Frameworks */,
 				7B64E21D19641ED100CDD6AB /* CoreGraphics.framework in Frameworks */,
 				7B64E21F19641ED100CDD6AB /* UIKit.framework in Frameworks */,
 				7B64E21B19641ED100CDD6AB /* Foundation.framework in Frameworks */,
@@ -103,6 +115,7 @@
 		7B64E21919641ED100CDD6AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BBE1FBF196AC3C10026021A /* libsqlite3.dylib */,
 				7B64E21A19641ED100CDD6AB /* Foundation.framework */,
 				7B64E21C19641ED100CDD6AB /* CoreGraphics.framework */,
 				7B64E21E19641ED100CDD6AB /* UIKit.framework */,
@@ -120,8 +133,14 @@
 				7B64E22F19641ED100CDD6AB /* Main_iPad.storyboard */,
 				7B64E23219641ED100CDD6AB /* WebProxyViewController.h */,
 				7B64E23319641ED100CDD6AB /* WebProxyViewController.m */,
+				7B64E2521964323500CDD6AB /* UrlCache.h */,
+				7B73C411196BAB0A00DCFCBB /* FilePathHelper.h */,
+				7B73C412196BAB0A00DCFCBB /* FilePathHelper.m */,
+				7B64E2531964323500CDD6AB /* UrlCache.m */,
 				7B64E23519641ED100CDD6AB /* Images.xcassets */,
 				7B64E22119641ED100CDD6AB /* Supporting Files */,
+				7B2F906C196BA8940038AB84 /* LocalCache.h */,
+				7B2F906D196BA8940038AB84 /* LocalCache.m */,
 			);
 			path = WebProxy;
 			sourceTree = "<group>";
@@ -254,6 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B73C413196BAB0A00DCFCBB /* FilePathHelper.m in Sources */,
+				7B2F906E196BA8940038AB84 /* LocalCache.m in Sources */,
+				7B64E2541964323500CDD6AB /* UrlCache.m in Sources */,
 				7B64E23419641ED100CDD6AB /* WebProxyViewController.m in Sources */,
 				7B64E22B19641ED100CDD6AB /* WebProxyAppDelegate.m in Sources */,
 				7B64E22719641ED100CDD6AB /* main.m in Sources */,
@@ -471,6 +493,7 @@
 				7B64E24E19641ED100CDD6AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B64E24F19641ED100CDD6AB /* Build configuration list for PBXNativeTarget "WebProxyTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +502,7 @@
 				7B64E25119641ED100CDD6AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
